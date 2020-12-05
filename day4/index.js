@@ -47,8 +47,6 @@ async function run() {
 }
 
 function validatePassport(passportRecord) {
-    const validEyeColours = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'];
-
     // validate birth year
     if (!validateRange(passportRecord.byr, 1920, 2002)) {
         return false;
@@ -82,7 +80,7 @@ function validatePassport(passportRecord) {
     }
 
     // validate eye colours
-    if (!validEyeColours.includes(passportRecord.ecl)) {
+    if (!['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'].includes(passportRecord.ecl)) {
         return false;
     }
 
