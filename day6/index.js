@@ -25,12 +25,6 @@ async function run() {
         }
 
         group.push(line.split(''));
-
-        // line.split('').forEach((x) => {
-        //     if (!group.find((y) => y == x)) {
-        //         group.push(x);
-        //     }
-        // });
     }
 
     let part1Count = 0;
