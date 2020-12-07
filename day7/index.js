@@ -53,17 +53,13 @@ async function run() {
         toCheck = nextCheck;
     }
 
-    let part2Count = getChildrenQuantity({ colour: 'shiny_gold', quantity: 1 });
+    let part2Count = getChildrenQuantity('shiny_gold');
 
-    function getChildrenQuantity(bag) {
-        if (!bag) {
-            return 0;
-        }
-
+    function getChildrenQuantity(bagColour) {
         let childCount = 0;
 
-        for (const childBag of records[bag.colour]) {
-            childCount += childBag.quantity * (1 + getChildrenQuantity(childBag));
+        for (const childBag of records[bagColour]) {
+            childCount += childBag.quantity * (1 + getChildrenQuantity(childBag.colour));
         }
 
         return childCount;
