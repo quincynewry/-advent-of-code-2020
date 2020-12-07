@@ -70,7 +70,7 @@ async function run() {
     }
 
     console.log('Part 1 count: ', part1Count);
-    console.log('Part 1 count: ', part2Count);
+    console.log('Part 2 count: ', part2Count);
 }
 
 run();
