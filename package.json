@@ -4,7 +4,7 @@
   "description": "",
   "main": ".prettierrc.js",
   "scripts": {
-    "test": "node day9/index.js"
+    "test": "node day10/index.js"
   },
   "author": "",
   "license": "ISC"
