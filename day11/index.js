@@ -35,15 +35,15 @@ async function run() {
         }
     } while (JSON.stringify(previousGrid) != JSON.stringify(activeGrid));
 
-    let part1 = 0;
+    let count = 0;
 
     activeGrid.forEach((x) => {
-        part1 += x.filter((y) => y == '#').length;
+        count += x.filter((y) => y == '#').length;
 
         console.log(x.join(''));
     });
 
-    console.log('Part 1: ', part1);
+    console.log('Answer: ', count);
 }
 
 function getAdjacentOccupiedCount(rows, rowIdx, spaceIdx) {
