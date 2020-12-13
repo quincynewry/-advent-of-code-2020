@@ -33,8 +33,6 @@ function run() {
                 waypoint.eastWest -= value;
                 break;
             case 'L':
-                turn(action, value);
-                break;
             case 'R':
                 turn(action, value);
                 break;
